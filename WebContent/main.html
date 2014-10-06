@@ -8,34 +8,46 @@
 <script src='jquery-1.11.1.js'></script>
 <script src='common.js'></script>
 
-<style type="text/css">
-td{
-	width : 150px;
-	height : 150px;
+<style>
+td {
+	width: 150px;
+	height: 150px;
 	border: 1px solid black;
-
 }
 
+.d0 {
+	background-color: lime;
+}
+
+.d1 {
+	background-color: red;
+}
+
+.d2 {
+	background-color: yellow;
+
+}
 </style>
+
 
 </head>
 <body>
-
-<table>
-
-<tr>
-<td id='d11'>1</td>  <td id='d12'>1</td>  <td id='d13'>1</td>  
-</tr>
-
-<tr>
-<td id='d21'>1</td>  <td id='d22'></td>  <td id='d23'></td>  
-</tr>
-
-<tr>
-<td id='d31'>1</td>  <td id='d32'></td>  <td id='d33'></td>  
-</tr>
-
-</table>
-
+	<table>
+		<tr>
+			<td id='d11' class='d0'></td>
+			<td id='d12' class='d0'></td>
+			<td id='d13' class='d1'></td>
+		</tr>
+		<tr>
+			<td id='d21' class='d0'></td>
+			<td id='d22' class='d1'></td>
+			<td id='d23' class='d0'></td>
+		</tr>
+		<tr>
+			<td id='d31' class='d1'></td>
+			<td id='d32' class='d0'></td>
+			<td id='d33' class='d0'></td>
+		</tr>
+	</table>
 </body>
 </html>
