@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+
+
+@import url(http://fonts.googleapis.com/css?family=Francois+One);
+
+table{
+	
+	margin: 0px auto;
+	
+}
+
+td {
+	width: 150px;
+	height: 150px;
+	border: 1px solid black;
+}
+
+.c0 {
+	background-color: #7b9a65;
+	/* 그린 - 기본 */
+}
+
+.c1 {
+	
+	background-color: #a8ac53;
+	/* 노랑 -정답 */
+}
+
+.c2 {
+	
+	background-color: #ad7252;
+	/* 빨강 - 오답 */
+}
+
+.c3 {
+	
+	background-color: #7b9a65;
+	/*그린 - 잠시 덮는 색 */
+}
+
+
+#start{
+	
+	
+}
