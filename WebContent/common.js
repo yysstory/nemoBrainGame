@@ -1,6 +1,6 @@
 //페이지 로드되자마자 실행되는 함수
 
-var round = 3 ;
+var round = 2 ;
 var imsi;
 var suc=0;
 var fa=0;
@@ -19,17 +19,21 @@ function startGame(){
 		$(v).addClass(ranSu());
 	}
 	
-	//정답 갯수 저
+	//정답 갯수 저장
 	imsi=$('.c3').length;
 	
 	
 	$(".c3").css('background-color','#a8ac53');
+
 
 	setTimeout(function() {
 		$(".c3").css('background-color','')
 	}, 2000);
 
 }
+
+
+
 
 
 // 셀을 클릭시 실행되는 함수
@@ -41,6 +45,7 @@ $(document).on('click','td',function() {
 		passCheck();
 	} else if (e1 === 'c0') {
 		$(this).addClass('c2').removeClass('c0');
+		failCheck();
 	} else {
 	}
 });
@@ -54,13 +59,13 @@ function ranSu() {
 }
 
 function drawTable(){
-
+	var nemo=100;
 	var no = 0;
 	for(i=0;i<round;i++){
 		var r	= $('<tr>').appendTo('#t1');
 		for(j=0;j<round;j++){
 			r.append($('<td>').attr('id','d'+no)
-					.attr('width','100').attr('height','100'));
+					.attr('width',nemo).attr('height',nemo).fadeIn(2000));
 			no++;
 		}
 	}
@@ -78,13 +83,17 @@ function passCheck(){
 	startGame();
 	
 	}else{
-		
 	}	
 }
 
+function failCheck(){
 
-
-
+	fa++;
+	if(fa>1);
+	alert('실패했습니다.! 새로운 게임으로 이동합니다!');
+	fa=0;
+	
+}
 /*
 function removeCl() {
 	$(this).removeClass('c0').
