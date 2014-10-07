@@ -1,31 +1,44 @@
 //페이지 로드되자마자 실행되는 함수
 
 var round = 3 ;
+var imsi;
+var suc=0;
+var fa=0;
 
 $(function() {
+	alert("노란색을 잘 기억해서 클릭해주세요~")
 	drawTable();
+	startGame();
 
+})
+
+function startGame(){
 	
 	for (var i = 0; i < round*round; i++) {
 		var v = "#d" + i;
 		$(v).addClass(ranSu());
 	}
-
+	
+	//정답 갯수 저
+	imsi=$('.c3').length;
+	
+	
 	$(".c3").css('background-color','#a8ac53');
 
 	setTimeout(function() {
 		$(".c3").css('background-color','')
 	}, 2000);
 
+}
 
-})
 
 // 셀을 클릭시 실행되는 함수
-$('td').click(function() {
-
+$(document).on('click','td',function() {
 	var e1 = $(this).attr('class');
 	if (e1 === 'c3') {
-		$(this).addClass('c1').removeClass('c3')
+		$(this).addClass('c1').removeClass('c3');
+		suc++;
+		passCheck();
 	} else if (e1 === 'c0') {
 		$(this).addClass('c2').removeClass('c0');
 	} else {
@@ -46,7 +59,8 @@ function drawTable(){
 	for(i=0;i<round;i++){
 		var r	= $('<tr>').appendTo('#t1');
 		for(j=0;j<round;j++){
-			r.append($('<td>').attr('id','d'+no));
+			r.append($('<td>').attr('id','d'+no)
+					.attr('width','100').attr('height','100'));
 			no++;
 		}
 	}
@@ -54,20 +68,20 @@ function drawTable(){
 
 
 function passCheck(){
+	if(imsi===suc){
+	alert('성공했습니다! 다음단계로 넘어갑니다!');
+	round++;
+	imsi=0;
+	suc=0;
+	$('tbody').remove();
+	drawTable();
+	startGame();
 	
+	}else{
+		
+	}	
 }
 
-
-
-function nextRound(){
-	
-}
-
-
-
-function fail(){
-	
-}
 
 
 
