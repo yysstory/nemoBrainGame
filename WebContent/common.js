@@ -1,46 +1,34 @@
 //페이지 로드되자마자 실행되는 함수
+
+var round = 3 ;
+
 $(function() {
-	for (var i = 1; i < 11; i++) {
+	drawTable();
+
+	
+	for (var i = 0; i < round*round; i++) {
 		var v = "#d" + i;
 		$(v).addClass(ranSu());
 	}
-	
 
-	
-	$(".c3").addClass('c1'); 
-	$(".c1").removeClass('c3');
-	
-	
-	
-	setTimeout(function (){
-		$(".c1").addClass('c3');
-	},2000);
-	
-	
-	$(".c3").removeClass('c1');
-	$(".c3").removeClass('c1 c3');
-	
-	
+	$(".c3").css('background-color','#a8ac53');
+
+	setTimeout(function() {
+		$(".c3").css('background-color','')
+	}, 2000);
+
+
 })
-
 
 // 셀을 클릭시 실행되는 함수
 $('td').click(function() {
 
-		var e1 = $(this).attr('class');
-		if (e1 === 'c3') {
-			$(this).removeClass('c0');
-			$(this).removeClass('c2');
-			$(this).removeClass('c1');
-			$(this).removeClass('c3');
-			$(this).addClass('c1');
-		} else if (e1 === 'c0') {
-			$(this).removeClass('c0');
-			$(this).removeClass('c1');
-			$(this).removeClass('c2');
-			$(this).removeClass('c3');
-			$(this).addClass('c2');
-		} else {
+	var e1 = $(this).attr('class');
+	if (e1 === 'c3') {
+		$(this).addClass('c1').removeClass('c3')
+	} else if (e1 === 'c0') {
+		$(this).addClass('c2').removeClass('c0');
+	} else {
 	}
 });
 
@@ -52,14 +40,45 @@ function ranSu() {
 		return 'c3';
 }
 
+function drawTable(){
 
-function removeClass(){
-	$(this).removeClass('c0');
-	$(this).removeClass('c1');
-	$(this).removeClass('c2');
-	$(this).removeClass('c3');
+	var no = 0;
+	for(i=0;i<round;i++){
+		var r	= $('<tr>').appendTo('#t1');
+		for(j=0;j<round;j++){
+			r.append($('<td>').attr('id','d'+no));
+			no++;
+		}
+	}
 }
 
+
+function passCheck(){
+	
+}
+
+
+
+function nextRound(){
+	
+}
+
+
+
+function fail(){
+	
+}
+
+
+
+/*
+function removeCl() {
+	$(this).removeClass('c0').
+	removeClass('c1').
+	removeClass('c2').
+	removeClass('c3');
+}
+*/
 /*
  * <script> $( "p" ).click(function() { $( this ).slideUp();
  * 

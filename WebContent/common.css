@@ -9,6 +9,13 @@ table{
 	
 }
 
+.c0:hover{
+	background-color: #b3675a;
+}
+.c3:hover{
+  background-color: #b3675a;
+}
+
 td {
 	width: 150px;
 	height: 150px;
@@ -16,25 +23,25 @@ td {
 }
 
 .c0 {
-	background-color: #7b9a65;
-	/* 그린 - 기본 */
+	background-color: #814338;
+	/* 밤색 - 기본 */
 }
 
 .c1 {
 	
-	background-color: #a8ac53;
-	/* 노랑 -정답 */
+	background-color: #4522b1;
+	/* 파랑 -정답 */
 }
 
 .c2 {
 	
-	background-color: #ad7252;
+	background-color: #dc1313;
 	/* 빨강 - 오답 */
 }
 
 .c3 {
 	
-	background-color: #7b9a65;
-	/*그린 - 잠시 덮는 색 */
-}
-
+	background-color: #814338;
+	/*밤색 - 잠시 덮는 색 */
+	}
+	
