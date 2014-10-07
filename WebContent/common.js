@@ -1,9 +1,10 @@
 //페이지 로드되자마자 실행되는 함수
 
-var round = 2 ;
+var round = 3 ;
 var imsi;
 var suc=0;
 var fa=0;
+var nemo=100;
 
 $(function() {
 	alert("노란색을 잘 기억해서 클릭해주세요~")
@@ -28,7 +29,7 @@ function startGame(){
 
 	setTimeout(function() {
 		$(".c3").css('background-color','')
-	}, 2000);
+	}, 1500);	
 
 }
 
@@ -59,16 +60,17 @@ function ranSu() {
 }
 
 function drawTable(){
-	var nemo=100;
+	
 	var no = 0;
 	for(i=0;i<round;i++){
 		var r	= $('<tr>').appendTo('#t1');
 		for(j=0;j<round;j++){
 			r.append($('<td>').attr('id','d'+no)
-					.attr('width',nemo).attr('height',nemo).fadeIn(2000));
+					.attr('width',nemo).attr('height',nemo).fadeIn(1500));
 			no++;
 		}
 	}
+	console.log("'"+nemo+"'");
 }
 
 
@@ -90,7 +92,8 @@ function failCheck(){
 
 	fa++;
 	if(fa>1);
-	alert('실패했습니다.! 새로운 게임으로 이동합니다!');
+	alert('실패했습니다.! 처음 게임으로 이동합니다!');
+	location.reload(true);	
 	fa=0;
 	
 }

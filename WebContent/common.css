@@ -4,9 +4,13 @@
 @import url(http://fonts.googleapis.com/css?family=Francois+One);
 
 table{
-	
 	margin: 0px auto;
+	border: 8px solid #4e2727;
+}
+
+h1{
 	
+	color:#814338;
 }
 
 .c0:hover{
@@ -17,7 +21,7 @@ table{
 }
 
 td {
-	border: 1px solid black;
+	margin: 1px solid #4e2727;	
 }
 
 .c0 {
