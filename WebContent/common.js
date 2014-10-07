@@ -104,7 +104,7 @@ function failCheck(){
 
 
 function timeOut(){
-	var sec = 30;
+	var sec = 60;
 	var timer = setInterval(function() {
 	   $('h3').text(sec--);
 	   if (sec == -1) {
