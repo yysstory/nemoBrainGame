@@ -9,8 +9,16 @@ table{
 }
 
 h1{
-	
 	color:#814338;
+	text-shadow: 5px 5px 5px #888888;
+}
+h2{
+	color:#814338;
+	text-shadow: 1px 1px 1px #888888;
+}
+h3{
+	color:#814338;
+	
 }
 
 .c0:hover{

@@ -4,12 +4,15 @@ var round = 3 ;
 var imsi;
 var suc=0;
 var fa=0;
-var nemo=100;
+var nemo=120;
 
 $(function() {
 	alert("노란색을 잘 기억해서 클릭해주세요~")
+		timeOut();
 	drawTable();
 	startGame();
+	$('h2').html('1라운드');
+
 
 })
 
@@ -71,6 +74,7 @@ function drawTable(){
 		}
 	}
 	console.log("'"+nemo+"'");
+	nemo=nemo-15;
 }
 
 
@@ -83,7 +87,7 @@ function passCheck(){
 	$('tbody').remove();
 	drawTable();
 	startGame();
-	
+	$('h2').html(round-2 +'라운드');
 	}else{
 	}	
 }
@@ -91,12 +95,33 @@ function passCheck(){
 function failCheck(){
 
 	fa++;
-	if(fa>1);
-	alert('실패했습니다.! 처음 게임으로 이동합니다!');
-	location.reload(true);	
-	fa=0;
-	
+	if(fa>1){
+		alert('실패했습니다.! 처음 게임으로 이동합니다!');
+		location.reload(true);	
+		fa=0;
+	}
 }
+
+
+function timeOut(){
+	var sec = 30;
+	var timer = setInterval(function() {
+	   $('h3').text(sec--);
+	   if (sec == -1) {
+	      $('h3').fadeOut('slow');
+	      clearInterval(timer);
+	       
+	      var a=$('h3').html();
+	      if(a<1){
+	  		alert('타임아웃! 처음 게임으로 이동합니다!');
+			location.reload(true);	
+	      }
+	   }
+	}, 1000);
+}
+
+
+
 /*
 function removeCl() {
 	$(this).removeClass('c0').
