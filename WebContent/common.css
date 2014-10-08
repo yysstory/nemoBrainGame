@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+
+@import url(http://fonts.googleapis.com/css?family=Francois+One);
+
+#t1{
+	margin: 0px auto;
+	border: 8px solid #4e2727;
+}
+
+#header,#footer{
+	margin: 0px auto;
+	border: 0px solid #4e2727;
+}
+
+#header td{
+	height: 50px;
+	width: 135px;
+	text-shadow: 1px 1px 1px #888888;
+}
+#footer td{
+	height: 50px;
+	width: 300px;
+	font-size: 30px;
+
+}
+
+
+
+h1 {
+	text-shadow: 5px 5px 5px #888888;
+}
+
+h2 {
+	text-shadow: 1px 1px 1px #888888;
+}
+
+h3 {
+	
+}
+
+h3, h2, h1 {
+	color: #814338;
+	text-align: center;
+}
+
+.c0:hover {
+	background-color: #b3675a;
+}
+
+.c3:hover {
+	background-color: #b3675a;
+}
+
+td {
+	margin: 1px solid #4e2727;
+	text-align: center;
+	color: #814338;
+}
+
+.c0 {
+	background-color: #814338;
+	/* 밤색 - 기본 */
+}
+
+.c1 {
+	background-color: #4522b1;
+	/* 파랑 -정답 */
+}
+
+.c2 {
+	background-color: #dc1313;
+	/* 빨강 - 오답 */
+}
+
+.c3 {
+	background-color: #814338;
+	/*밤색 - 잠시 덮는 색 */
+}
