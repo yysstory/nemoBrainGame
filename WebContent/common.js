@@ -104,14 +104,15 @@ function failCheck(){
 
 
 function timeOut(){
-	var sec = 60;
+	var sec = 10;
 	var timer = setInterval(function() {
-	   $('h3').text(sec--);
+	   $('h3').html('Time'+sec--);
 	   if (sec == -1) {
 	      $('h3').fadeOut('slow');
 	      clearInterval(timer);
 	       
 	      var a=$('h3').html();
+	       console.log('time :'+a);
 	      if(a<1){
 	  		alert('타임아웃! 처음 게임으로 이동합니다!');
 			location.reload(true);	
